@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de fotos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jquery.flipster.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+                    <img src="imagens/imagem1.jpg" class="active" id="content1">
+                    <img src="imagens/imagem2.jpg" id="content2">
+                    <img src="Imagens/imagem3.jpg" id="content3">
+                    <img src="Imagens/imagem4.jpg" id="content4">
+                    <img src="Imagens/imagem5.jpg" id="content5">
+                    <img src="Imagens/imagem6.jpg" id="content6">
+                    <img src="Imagens/imagem7.jpg" id="content7">
+                    <img src="Imagens/imagem8.jpg" id="content8">
+                    <img src="Imagens/imagem9.jpg" id="content9">
+                    <img src="Imagens/imagem10.jpg" id="content10">
+                    <img src="Imagens/imagem11.jpg" id="content11">
+                    <img src="Imagens/imagem12.jpg" id="content12">
+                    <img src="Imagens/imagem13.jpg" id="content13">
+                    <img src="Imagens/imagem14.jpg" id="content14">
+                    <img src="Imagens/imagem15.jpg" id="content15">
+                    <img src="Imagens/imagem16.jpg" id="content16">
+                    <img src="Imagens/imagem17.jpg" id="content17">
+        </div>
+        <button id="prev" onclick="prev()"> &lt; </button>
+        <button id="next" onclick="next()"> &gt; </button>
+    </div>
+
+<script>
+    let i = 0; 
+    let j = 17;
+
+    function next(){
+        document.getElementById("content" + (i+1)).
+        classList.remove("active");
+        i = (j + i + 1) % j;
+        document.getElementById("content" + (i+1)).
+        classList.add("active");
+    }
+    function prev(){
+        document.getElementById("content" + (i+1)).
+        classList.remove("active");
+        i = (j + i -1) % j;
+        document.getElementById("content" + (i+1)).
+        classList.add("active");
+    }
+
+
+</script>
+
+</body>
+</html>
